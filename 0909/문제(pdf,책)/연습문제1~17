@@ -1,0 +1,50 @@
+1. 2
+2. 2
+3. 4
+4. 1
+5. 1
+6. 4
+7. 4
+8. 2
+
+9. <meta name="description" content="자바에 대해 알려주려고">
+
+10.
+<head>
+<base href="http://www.mysite.com/html/design/">
+</head>
+
+<a href="dress.html">옷</a>
+<a href="shoes.html">신발</a>
+
+11.
+(1) <ul>
+(2) <ol>
+(3) <dl>
+
+12. 파란색 / 보라색 / 빨간색
+
+13. 1
+
+14.
+(1)
+<body>
+<h3>나의 이야기</h3>
+<hr>
+나는 자랑스러운 대한민국의 국민입니다.
+</body>
+
+(2)
+<br>
+Merry Christmas! Happy New Year!
+
+15. 3
+
+16.
+<audio controls>
+<source src="hello.mp3" type="audio/mpeg">
+audio를 지원하지 않습니다.
+</audio>
+
+17.
+320x240, controls, autoplay, bear.mp4 먼저 재생 후 안되면 bear.ogg 재생
