@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple CSS Example</title>
+    <style>
+      :root {
+        --bg: #f5f7ff;
+        --card: #ffffff;
+        --primary: #5b6cff;
+        --primary-dark: #4455dd;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --shadow: rgba(91, 108, 255, 0.18);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #eef2ff, #f8fafc);
+        color: var(--text);
+      }
+
+      .card {
+        width: 360px;
+        background: var(--card);
+        border-radius: 18px;
+        box-shadow: 0 15px 35px var(--shadow);
+        padding: 28px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: bold;
+        color: var(--primary-dark);
+        background: #edf0ff;
+        border-radius: 999px;
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 2rem;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .btn {
+        flex: 1;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 18px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+      }
+
+      .btn-secondary {
+        background: #f3f4f6;
+        color: var(--text);
+      }
+
+      .btn-secondary:hover {
+        background: #e5e7eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="badge">CSS Example</div>
+      <h1>Hello, CSS!</h1>
+      <p>
+        간단한 카드 레이아웃 예제입니다. 스타일을 적용해서 깔끔한 UI를 만들 수 있습니다.
+      </p>
+
+      <div class="actions">
+        <button class="btn btn-primary">확인</button>
+        <button class="btn btn-secondary">취소</button>
+      </div>
+    </div>
+  </body>
+</html>
