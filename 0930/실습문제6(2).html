@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>animation</title>
+
+<style>
+@keyframes swing {
+    from {
+        transform: rotate(-90deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+img {
+    animation-name: swing;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+</style>
+
+</head>
+
+<body>
+
+<h3>어지러워요</h3>
+<hr>
+
+<img src="스폰지밥.jpg"
+     width="100"
+     height="100">
+
+</body>
+</html>

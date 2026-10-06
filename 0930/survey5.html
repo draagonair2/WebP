@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>설문조사</title>
+    <link rel="stylesheet" href="survey5.css">
+</head>
+
+<body>
+
+<header>
+    <h1>설문지</h1>
+
+    <p>
+        소프트웨어 기술에 대한 의견을 듣습니다.
+        많은 참여 바랍니다.
+    </p>
+</header>
+
+
+<section>
+
+    <form>
+
+        <p>
+            <span>학년</span>
+
+            <label>
+                <input type="radio" name="grade" value="1">
+                1학년
+            </label>
+
+            <label>
+                <input type="radio" name="grade" value="2">
+                2학년
+            </label>
+
+            <label>
+                <input type="radio" name="grade" value="3">
+                3학년
+            </label>
+
+            <label>
+                <input type="radio" name="grade" value="4">
+                4학년
+            </label>
+        </p>
+
+
+        <p>
+            <span>성별</span>
+
+            <label>
+                <input type="radio" name="gender" value="male">
+                남
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="female">
+                여
+            </label>
+        </p>
+
+
+        <p>
+            <span>관심 분야</span>
+
+            <select name="interest">
+                <option>모바일 소프트웨어</option>
+                <option>웹 프로그래밍</option>
+                <option>인공지능</option>
+                <option>게임</option>
+            </select>
+        </p>
+
+
+        <p>
+            <span>진로</span>
+
+            <label>
+                <input type="checkbox" name="future" value="development">
+                개발
+            </label>
+
+            <label>
+                <input type="checkbox" name="future" value="planning">
+                기획
+            </label>
+
+            <label>
+                <input type="checkbox" name="future" value="sales">
+                영업
+            </label>
+
+            <label>
+                <input type="checkbox" name="future" value="business">
+                창업
+            </label>
+        </p>
+
+
+        <p>
+            <span>남기고 싶은 말</span>
+        </p>
+
+        <textarea
+            name="comment"
+            rows="10"
+            cols="50"
+            placeholder="글을 남겨주세요."></textarea>
+
+    </form>
+
+</section>
+
+
+<footer>
+    <p>Copyright 2022 by Kitae</p>
+</footer>
+
+</body>
+
+</html>

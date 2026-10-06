@@ -1,0 +1,70 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+
+/* 위쪽 제목 영역 */
+header {
+    height: 20%;
+    background-color: yellow;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+header p {
+    margin-left: 10px;
+}
+
+
+/* 설문조사 영역 */
+section {
+    height: 72%;
+    background-color: pink;
+}
+
+form {
+    padding: 10px;
+}
+
+form p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* 학년, 성별, 관심 분야 등의 제목 */
+span {
+    color: blue;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* 입력 요소 간격 */
+input {
+    margin-left: 5px;
+}
+
+
+/* 입력창 */
+textarea {
+    width: 95%;
+    height: 150px;
+}
+
+
+/* 아래 footer */
+footer {
+    height: 8%;
+    background-color: plum;
+}
+
+footer p {
+    margin: 0;
+    padding: 10px;
+}

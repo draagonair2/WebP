@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+/* 구글 폰트 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+/* 전체 페이지 */
+body {
+    background-color: #f5f5f5;
+    color: #2f2f2f;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+
+
+/* 각각의 영역 */
+section {
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 40px;
+
+    margin-bottom: 10px;
+}
+
+
+/* 전체 내용을 감싸는 영역 */
+.wrapper {
+    width: 85%;
+
+    margin: 20px auto;
+}
+
+
+/* 가장 큰 제목은 화면에서 숨김 */
+h1 {
+    display: none;
+}
+
+
+h2,
+h3 {
+    font-family: sans-serif;
+}
+
+
+/* About, Contact, Skills 등의 제목 */
+h2 {
+    margin: 0 0 20px 0;
+
+    text-transform: uppercase;
+
+    font-size: 18px;
+}
+
+
+/* My Info 제목 숨기기 */
+#my_info h2 {
+    display: none;
+}
+
+
+/* 프로필 사진 */
+#my_info img {
+
+    width: 100px;
+
+    height: auto;
+
+    border-radius: 50px;
+
+    margin-right: 40px;
+}
+
+
+/* 개인정보 표 */
+table {
+
+    display: inline-block;
+
+    border-collapse: collapse;
+
+    border-spacing: 0;
+
+    vertical-align: top;
+}
+
+
+/* 표 제목 */
+th {
+    text-align: left;
+
+    padding-right: 20px;
+}
+
+
+/* 표의 글자 크기 */
+th,
+td {
+    font-size: 12px;
+}
+
+
+/* 이름 부분의 '이름' 글자는 숨김 */
+#myname th {
+    display: none;
+}
+
+
+/* 이름 크게 표시 */
+#myname td {
+
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+/* 모든 링크 */
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* 링크에 마우스를 올렸을 때 */
+a:hover {
+
+    text-decoration: underline;
+
+    color: gold;
+}
+
+
+/* Contact 목록 */
+ul {
+
+    list-style: none;
+
+    padding: 0;
+}
+
+
+ul li {
+
+    margin-bottom: 4px;
+}
+
+
+/* 아이콘 영역 */
+ul li::before {
+
+    display: inline-block;
+
+    width: 20px;
+
+    height: 20px;
+
+    vertical-align: middle;
+
+    margin-right: 10px;
+}
+
+
+/* 전화 아이콘 */
+ul li:nth-child(1)::before {
+    content: url('../images/ico_mobile.png');
+}
+
+
+/* 이메일 아이콘 */
+ul li:nth-child(2)::before {
+    content: url('../images/ico_email.png');
+}
+
+
+/* 페이스북 아이콘 */
+ul li:nth-child(3)::before {
+    content: url('../images/ico_facebook.png');
+}
+
+
+/* 블로그 아이콘 */
+ul li:nth-child(4)::before {
+    content: url('../images/ico_blog.png');
+}
+
+
+/* Skills 목록 */
+#skill ol {
+
+    list-style: none;
+
+    padding: 0;
+}
+
+
+/* Skill 하나하나 */
+#skill li {
+
+    display: inline-block;
+
+    background-color: gold;
+
+    padding: 4px 10px;
+
+    border-radius: 32px;
+
+    margin: 0 8px 8px 0;
+}
+
+
+/* Skill 앞에 # 붙이기 */
+#skill li::before {
+    content: "#";
+}
+
+
+/* 프로젝트 목록 */
+#project ol {
+
+    list-style: none;
+
+    padding: 0;
+}
+
+
+/* 프로젝트 하나하나 */
+#project li {
+
+    border-bottom: 1px solid #ddd;
+
+    padding-bottom: 20px;
+}
+
+
+/* 마지막 프로젝트는 밑줄 제거 */
+#project li:last-child {
+
+    border-bottom: none;
+}
+
+
+/* 동영상 크기 */
+#project video {
+
+    width: 100%;
+}
+
+
+/* 프로젝트 링크 */
+#project a {
+
+    color: gold;
+
+    display: inline-block;
+
+    border-radius: 4px;
+
+    padding: 2px 8px 2px 0;
+}
+
+
+/* 프로젝트 링크에 마우스를 올렸을 때 */
+#project a:hover {
+
+    background-color: #2f2f2f;
+
+    text-decoration: none;
+
+    padding: 2px 8px;
+
+    transition: padding 0.2s;
+}
