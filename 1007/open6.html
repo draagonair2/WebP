@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>별 문자 출력하기</title>
+    <script>
+        // 별을 출력하는 함수
+        function printStar(n) {
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= i; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>별 문자 출력하기</h3>
+    <hr>
+
+    <script>
+        let input = prompt("정수를 입력하세요", "");
+        let n = parseInt(input, 10);
+
+        if (input === null || input.trim() === "" ||
+            isNaN(n) || n <= 0 ||
+            input.trim() !== String(n)) {
+            document.write("입력 오류입니다.");
+        }
+        else {
+            printStar(n);
+        }
+    </script>
+</body>
+</html>
