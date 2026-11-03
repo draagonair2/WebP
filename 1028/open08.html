@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>갬블링 게임</title>
+<style>
+    span {
+        display: inline-block;
+        width: 50px;
+        height: 60px;
+        font-size: 40px;
+        font-style: italic;
+        text-align: center;
+        color: blue;
+        background-color: pink;
+        cursor: pointer;
+    }
+
+    #result {
+        cursor: pointer;
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+    <h3>갬블링 게임</h3>
+    <p>
+        각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다.
+        모두 같은 숫자가 나오면 승리합니다.
+    </p>
+    <hr>
+
+    <div>
+        <span onclick="change(0)">0</span>
+        <span onclick="change(1)">0</span>
+        <span onclick="change(2)">0</span>
+    </div>
+
+    <p id="result" onclick="reset()"></p>
+
+<script>
+    let numbers = [0, 0, 0];
+    let clicked = [false, false, false];
+    let spans = document.getElementsByTagName("span");
+    let result = document.getElementById("result");
+
+    function change(i) {
+        if (clicked[i]) return;
+
+        if (clicked.every(v => v)) return;
+
+        numbers[i] = Math.floor(Math.random() * 3);
+        spans[i].innerHTML = numbers[i];
+        clicked[i] = true;
+
+        if (clicked.every(v => v)) {
+            if (numbers[0] == numbers[1] &&
+                numbers[1] == numbers[2]) {
+                result.innerHTML =
+                    "Success(click here to do again)";
+                result.style.color = "blue";
+            } else {
+                result.innerHTML =
+                    "fail(click here to do again)";
+                result.style.color = "black";
+            }
+        }
+    }
+
+    function reset() {
+        numbers = [0, 0, 0];
+        clicked = [false, false, false];
+
+        for (let i = 0; i < 3; i++) {
+            spans[i].innerHTML = 0;
+        }
+
+        result.innerHTML = "";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 확대하기</title>
+    <script>
+        let n = 1;
+
+        function enlarge(obj) {
+            n++;
+            obj.style.transform = "scale(" + n + ",1)";
+        }
+    </script>
+</head>
+<body>
+    <h3>클릭하면 2,3,4배로 옆으로 늘어납니다.</h3>
+    <hr>
+
+    <img src="mediaspongebob.png"
+         width="100"
+         height="140"
+         style="transform-origin:left center"
+         onclick="enlarge(this)">
+</body>
+</html>
