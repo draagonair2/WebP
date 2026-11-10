@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>마우스 클릭 연습</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid gray;
+            width: 35px;
+            height: 35px;
+            padding: 0;
+        }
+
+        img {
+            display: block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <h3>마우스 클릭 연습</h3>
+    <hr>
+    <table id="board"></table>
+
+    <script>
+        let position = -1;
+
+        function init() {
+            let board = document.getElementById("board");
+
+            for (let i = 0; i < 10; i++) {
+                let tr = document.createElement("tr");
+
+                for (let j = 0; j < 10; j++) {
+                    let td = document.createElement("td");
+                    let img = document.createElement("img");
+
+                    img.onclick = function() {
+                        move(this);
+                    };
+
+                    td.appendChild(img);
+                    tr.appendChild(td);
+                }
+
+                board.appendChild(tr);
+            }
+
+            position = Math.floor(Math.random() * 100);
+            document.images[position].src = "donkey.png";
+        }
+
+        function move(obj) {
+            if (obj != document.images[position]) {
+                return;
+            }
+
+            document.images[position].removeAttribute("src");
+
+            let next = Math.floor(Math.random() * 99);
+
+            if (next >= position) {
+                next++;
+            }
+
+            position = next;
+            document.images[position].src = "donkey.png";
+        }
+    </script>
+</body>
+</html>
