@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>눈 내리는 샤갈의 마을</title>
+
+    <style>
+        body {
+            background-image: url("media/snow.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        div {
+            position: absolute;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let snow = [];
+
+        for (let i = 0; i < 30; i++) {
+            snow[i] = document.createElement("div");
+            snow[i].innerHTML = "*";
+
+            snow[i].style.left =
+                Math.random() * window.innerWidth + "px";
+
+            snow[i].style.top =
+                Math.random() * window.innerHeight + "px";
+
+            document.body.appendChild(snow[i]);
+        }
+
+        function fall() {
+            for (let i = 0; i < 30; i++) {
+                let y = parseFloat(snow[i].style.top);
+
+                y += 3;
+
+                if (y >= window.innerHeight - 20) {
+                    y = 0;
+                }
+
+                snow[i].style.top = y + "px";
+            }
+        }
+
+        setInterval(fall, 50);
+    </script>
+</body>
+</html>
